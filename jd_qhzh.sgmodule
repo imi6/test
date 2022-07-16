@@ -1,0 +1,23 @@
+#!name=id777
+#!desc=京东账号辅助
+
+
+[Script]
+
+京东登录辅助6 = type=http-response,pattern=https?://plogin.m.jd.com/cgi-bin/mm/domlogin,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/unHttpOnly.js
+京东登录辅助7 = type=http-response,pattern=https://jdqd.jd.com/poststring
+
+# web切换jd cookie
+京东登录辅助1 = type=http-response,pattern=^https?:\/\/.{0,27}\.?jd\.(com|hk)\/?((?!\.(js|json|jpg|gif|png|webp|dpg|flv|mp3|mp4)).)*$,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/jd_hd.js
+京东登录辅助2 = type=http-response,pattern=^https?:\/\/.*\.jingxi\.com\/?((?!\.(js|json|jpg|gif|png|flv|mp3|mp4)).)*$,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/jd_hd.js
+
+
+# 京东活动
+京东登录辅助3 = type=http-response,pattern=https?://lkyl.dianpusoft.cn,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/jd_hd.js
+京东登录辅助4 = type=http-response,pattern=https?://.*\.isvjcloud\.com,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/jd_hd.js
+京东登录辅助5 = type=http-response,pattern=https?://.*\.moxigame\.cn,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/jd_hd.js
+
+
+
+[MITM]
+hostname = -lite-msg.m.jd.com, -jdpaysdk.jd.com, -jdcs.m.jd.com, -ddms.jd.com, -redpoint-msg.m.jd.com, -msjdpay.jd.com, -payfinish.jd.com, -payfinish.m.jd.com, *.jd.com, *.*.jd.com ,*.jd.hk, *.*.jd.hk, *.moxigame.cn, *.isvjcloud.com
